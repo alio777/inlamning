@@ -1,21 +1,15 @@
-
-
-
-
 const getNames = async (inputName, inputCountry) => {
     const response = await fetch(`https://api.abalin.net/getdate?name=${inputName}&country=${inputCountry}`);
-    console.log(response)
 
-    const searchResult = await response.json();
+    const data1 = await response.json();
 
-    return searchResult;
+    return data1;
 };
 
-const getDate = async (country, month, day) => {
-    const response = await fetch(`https://api.abalin.net/namedays?country=${country}&month=${month}&day=${day}`);
-    console.log(response)
+const getDate = async (inputCountry, inputMonth, inputDay) => {
+    const response = await fetch(`https://api.abalin.net/namedays?country=${inputCountry}&month=${inputMonth}&day=${inputDay}`);
 
-    const data = await response.json();
+    const data2 = await response.json();
 
-    return data;
+    return data2;
 };
