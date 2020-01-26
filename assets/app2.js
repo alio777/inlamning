@@ -2,7 +2,7 @@ const getNames = async (inputName, inputCountry) => {
     const response = await fetch(`https://api.abalin.net/getdate?name=${inputName}&country=${inputCountry}`);
 
     const data1 = await response.json();
-
+    
     return data1;
 };
 
